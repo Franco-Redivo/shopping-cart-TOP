@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers the logo horizontally */
+    position: relative; /* lets us position cart separately */
+    height: 60px;
+    padding: 0 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* logo styling */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 32px;
+    margin-right: 8px;
+}
+
+/* cart styling */
+.cart {
+    position: absolute;
+    right: 20px; /* stick to right edge */
+}
+
+.cart img {
+    height: 28px;
+    cursor: pointer;
+}
