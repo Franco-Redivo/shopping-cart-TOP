@@ -7,16 +7,23 @@ const routes = [
     {
         path: "/",
         element: <App/>,
+        children:[
+            {
+                index: true,
+                element:<Home/>,
+            },
+            {
+                path:'store',
+                element:<Store/>,
+            },
+            // {
+            //     path:'cart',
+            //     element:<Cart/>,
+            // },
+        ]
         // errorElement:<ErrorPage/>
     },
-    {
-        path: "store/",
-        element: <Store/>
-    },
-    // {
-    //     path: "cart/",
-    //     element: <Cart/>
-    // },
+    
 ];
 
 export default routes;

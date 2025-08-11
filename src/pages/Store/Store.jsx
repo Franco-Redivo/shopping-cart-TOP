@@ -1,26 +1,34 @@
 import Navbar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import styles from "./Store.module.css";
 import {useState, useEffect} from "react";
 import productService from "../../service/products";
+import { useOutletContext } from "react-router-dom";
 
 const Store = () => {
 
-    const {products, setProducts} = useState([]);
+    const [products, setProducts] = useState([]);
+    const {addToCart} = useOutletContext();
 
     useEffect(() => {
-        const fetchedProducts = productService.getAll();
-        setProducts(fetchedProducts);
+        const fetchProducts = async () => {
+            const fetchedProducts = await productService.getAll();
+            setProducts(fetchedProducts);
+        };
+        fetchProducts(); 
     },[]);
 
     return(
-        <>
+        <div className={styles.main}>
             <Navbar/>
-            {products.map(product => {
-                <ProductCard key={product.id} item={product}/>
-            })}
+            <div className={styles.productGrid}>
+                {products.map((product) => (
+                    <ProductCard key={product.id} product={product} addToCart={addToCart}/>
+                ))}
+            </div>
             <Footer/>
-        </>
+        </div>
     )
 }
 
