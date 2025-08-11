@@ -1,11 +1,11 @@
-import Hero from "../../components/Hero/Hero"
-import Navbar from "../../components/Navbar/NavBar"
-import Footer from "../../components/Footer/Footer"
+import Hero from "../../components/Hero/Hero";
+import Navbar from "../../components/Navbar/NavBar";
+import Footer from "../../components/Footer/Footer";
 import styles from "./Home.module.css";
-import instagramIcon from "../../assets/icons/instagram.png"
-import twitterIcon from "../../assets/icons/twitter.png"
-import youtubeIcon from "../../assets/icons/youtube.png"
-import tiktokIcon from "../../assets/icons/tik-tok.png"
+import instagramIcon from "../../assets/icons/instagram.png";
+import twitterIcon from "../../assets/icons/twitter.png";
+import youtubeIcon from "../../assets/icons/youtube.png";
+import tiktokIcon from "../../assets/icons/tik-tok.png";
 
 
 const Home = () => {
