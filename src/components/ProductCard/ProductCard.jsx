@@ -1,8 +1,15 @@
 import styles from "./ProductCard.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const ProductCard = ({product, addToCart}) => {
     const [quantity, setQuantity] = useState(1);
+
+    const {cart} = useOutletContext();
+
+    useEffect(() => {
+        console.log(cart);
+    },[cart]);
 
     const handleAddToCart = () => {
         addToCart(product,quantity);

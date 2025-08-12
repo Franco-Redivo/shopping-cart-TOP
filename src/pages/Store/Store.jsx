@@ -9,7 +9,7 @@ import { useOutletContext } from "react-router-dom";
 const Store = () => {
 
     const [products, setProducts] = useState([]);
-    const {addToCart} = useOutletContext();
+    const {cart, addToCart} = useOutletContext();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -21,7 +21,7 @@ const Store = () => {
 
     return(
         <div className={styles.main}>
-            <Navbar/>
+            <Navbar cart={cart}/>
             <div className={styles.productGrid}>
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product} addToCart={addToCart}/>

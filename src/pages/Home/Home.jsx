@@ -6,13 +6,15 @@ import instagramIcon from "../../assets/icons/instagram.png";
 import twitterIcon from "../../assets/icons/twitter.png";
 import youtubeIcon from "../../assets/icons/youtube.png";
 import tiktokIcon from "../../assets/icons/tik-tok.png";
+import { useOutletContext } from "react-router-dom";
 
 
 const Home = () => {
+    const { cart } = useOutletContext();
 
     return(
         <>
-            <Navbar/>
+            <Navbar cart={cart}/>
             <Hero/>
             <div className={styles.homeContent}>
                 <div className={styles.bio}>

@@ -30,7 +30,30 @@
     right: 20px; /* stick to right edge */
 }
 
+.cart a {
+    position: relative;
+    display: inline-block;
+}
+
 .cart img {
     height: 28px;
     cursor: pointer;
+}
+
+.cartCounter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    min-width: 20px;
+    border: 2px solid white;
 }
