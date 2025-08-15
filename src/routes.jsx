@@ -1,7 +1,7 @@
 import App from "./App";
 import Home from "./pages/Home/Home";
 import Store from "./pages/Store/Store";
-// import Cart from "./pages/Cart/Cart";
+import Cart from "./pages/Cart/Cart";
 
 const routes = [
     {
@@ -16,10 +16,10 @@ const routes = [
                 path:'store',
                 element:<Store/>,
             },
-            // {
-            //     path:'cart',
-            //     element:<Cart/>,
-            // },
+            {
+                path:'cart',
+                element:<Cart/>,
+            },
         ]
         // errorElement:<ErrorPage/>
     },

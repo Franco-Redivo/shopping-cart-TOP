@@ -16,7 +16,7 @@ const NavBar = ({ cart = [] }) => {
                 </Link>
             </div>
             <div className={styles.cart}>
-                <Link to="cart">
+                <Link to="/cart">
                     <img src={cartIcon} alt="cart"/>
                     {totalItems > 0 && (
                         <span className={styles.cartCounter}>{totalItems}</span>
