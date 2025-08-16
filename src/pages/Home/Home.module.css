@@ -96,7 +96,7 @@
     background-color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .homeContent {
         flex-direction: column;
         gap: 2rem;
@@ -107,9 +107,18 @@
         border-radius: 5px;
         margin-bottom: 1rem;
     }
+    .subscriptionContent {
+        width: 100%;
+        padding: 0;
+    }
 
     .subscriptionContent button {
         width: 100%;
         border-radius: 5px;
     }
+
+    .bio{
+        width: 100%;  
+    }
+
 }
